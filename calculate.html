@@ -1,0 +1,23 @@
+<!-- I used that scrip for see how unlineal its my highestOccurrence function -->
+
+<script src="./logicFunctions.js"></script>
+<script>
+  const generateArrays = function (length) {
+    const arrays = [];
+    for (let i = 0; i < length; i++) {
+      arrays.push(Math.random());
+    }
+    return arrays;
+  };
+</script>
+<script>
+  let array = generateArrays(2000000);
+
+  for (let i = 0; i < 7; i++) {
+    let timeStart = Date.now();
+    let result = highestOccurrence(array);
+    let timeEnd = Date.now();
+    console.log(array.length, timeEnd - timeStart);
+    array.length = array.length / 2;
+  }
+</script>
