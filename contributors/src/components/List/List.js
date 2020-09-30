@@ -39,6 +39,7 @@ function List({ loadContributors, contributors }) {
                 </form>
                 <h3>CONTRIBUTORS</h3>
                 <ul className='list'>
+                    {contributors ? contributors.message : ''}
                     {contributors.length > 0 && contributors.map(contributor => {
 
                         return <ul key={contributor.id}>{contributor.login}</ul>
